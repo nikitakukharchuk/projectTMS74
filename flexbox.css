@@ -1,0 +1,46 @@
+.container {
+  background-color: darkgrey;
+  display: flex;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  justify-content: space-evenly;
+}
+
+.red {
+  background-color: red;
+  padding: 50px;
+}
+
+.combo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.green {
+  background-color: greenyellow;
+  padding: 10px 40px;
+}
+
+.combo__two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pink {
+  background-color: hotpink;
+  padding: 10px 20px;
+}
+
+.four {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fourA {
+  background-color: mediumaquamarine;
+  padding: 5px 10px;
+  margin: ;
+}
