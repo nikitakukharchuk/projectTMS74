@@ -234,9 +234,6 @@ h6 {
 
 /* SERVICES */
 
-.services {
-}
-
 .service__items {
   margin-top: 100px;
   max-width: 1200px;
@@ -250,7 +247,6 @@ h6 {
 .service__item__img {
   margin: 0 10px;
   display: inline-block;
-  float: left;
 }
 
 .service__item__text h3 {
@@ -573,8 +569,6 @@ h6 {
   font-weight: 400;
   font-size: 18px;
   color: #c6cbcd;
-}
-.footer__followers {
 }
 
 .footer__followers {
