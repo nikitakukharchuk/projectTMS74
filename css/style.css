@@ -19,7 +19,7 @@ h6 {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -31,7 +31,7 @@ h6 {
   width: 100%;
   height: 1024px;
   margin: 0 auto;
-  background: url("../css/img/welcome/Rectangle\ 1.png");
+  background: url("../css/img/welcome/MoGo2.png");
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -56,7 +56,7 @@ h6 {
 .welcome__title:after {
   content: "";
   display: block;
-  width: 60px;
+  width: 170px;
   height: 3px;
   margin: 60px auto 0;
 
@@ -71,8 +71,21 @@ h6 {
   text-align: center;
 }
 
-.learnmore {
-  margin: 72px auto 116px;
+.learnmore__btn {
+  display: inline-block;
+  margin: 75px auto 120px;
+  padding: 20px 100px;
+  border: 3px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background 0.2s linear, color 0.2s linear;
+}
+
+.learnmore__btn:hover {
+  background-color: #fff;
+  color: #f4bf87;
+  border: 3px solid #da8225;
 }
 
 .welcome__slider {
@@ -85,15 +98,19 @@ h6 {
   border-top: 2px solid #fff;
 
   padding-top: 30px;
+  font-family: Raleway;
+  font-style: normal;
   font-size: 18px;
-  color: #fff;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .slider__num {
-  font-size: 24px;
-  font-weight: 700;
-  margin-right: 3px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
 }
 
 /* Header */
@@ -194,6 +211,50 @@ h6 {
 .superteam {
   display: flex;
   justify-content: space-between;
+}
+
+.superteam__item {
+  background: #95e1d3;
+  position: relative;
+}
+
+.superteam__item:hover .superteam__item__img {
+  transform: translate3d(-10px, -10px, 0);
+}
+
+.superteam__item:hover .superteam__item__img img {
+  opacity: 0.1;
+}
+
+.superteam__item__img {
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  transition: transform 0.3s linear;
+}
+
+.superteam__item__img img {
+  transition: opacity 0.1s linear;
+  display: block;
+}
+
+.superteam__item__icon {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+  transform: translate3d(0, -50%, 0);
+
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.superteam__text {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 /* FUTURES */
