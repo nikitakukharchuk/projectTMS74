@@ -187,18 +187,28 @@ h6 {
 }
 .above__title__name {
   font-family: "Kaushan Script", cursive;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 400;
   color: #2d3033;
-  padding: 30px;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 .title__name {
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 36px;
   padding: 30px;
+}
+
+.title__name:after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 3px;
+  margin: 40px auto 0;
+  background-color: #f38281;
 }
 
 .story__text__subtitle {
@@ -216,6 +226,7 @@ h6 {
 .superteam__item {
   background: #95e1d3;
   position: relative;
+  cursor: pointer;
 }
 
 .superteam__item:hover .superteam__item__img {
@@ -224,6 +235,10 @@ h6 {
 
 .superteam__item:hover .superteam__item__img img {
   opacity: 0.1;
+}
+
+.superteam__item:hover .superteam__item__icon {
+  opacity: 2;
 }
 
 .superteam__item__img {
@@ -244,9 +259,11 @@ h6 {
   left: 0;
   z-index: 2;
   transform: translate3d(0, -50%, 0);
+  opacity: 0;
 
   color: #fff;
   text-transform: uppercase;
+  transition: opacity 0.2s linear;
 }
 
 .superteam__text {
@@ -267,11 +284,12 @@ h6 {
 
 .future__items {
   border-left: solid 1px #fff;
+  display: flex;
 }
 
 .future__item {
-  width: 19.4%;
-  display: inline-table;
+  flex: 1 1 0;
+
   margin: 0 auto;
   text-align: center;
   border-right: solid 1px #fff;
@@ -288,7 +306,7 @@ h6 {
 
 .future__text {
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 24px;
   color: #fff;
 }
@@ -296,18 +314,20 @@ h6 {
 /* SERVICES */
 
 .service__items {
-  margin-top: 100px;
-  max-width: 1200px;
+  margin: 100px 0;
+  display: flex;
+}
+
+.service__items:last-child {
+  padding-top: 40px;
 }
 
 .service__item {
-  width: 33%;
-  display: inline-block;
+  display: flex;
 }
 
-.service__item__img {
-  margin: 0 10px;
-  display: inline-block;
+.service__item__text {
+  padding: 10px 0 0 35px;
 }
 
 .service__item__text h3 {
@@ -329,15 +349,23 @@ h6 {
   background: url("./img/alldevices/devicesimg.png");
   -webkit-background-size: cover;
   background-size: cover;
-  height: 1250px;
+  height: 865px;
 }
 
 .devices__items {
   margin-top: 30px;
+  position: relative;
+}
+
+.ipad {
+  z-index: 0;
 }
 
 .iphone {
-  text-align: center;
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 70%;
 }
 
 /* WEDO */
@@ -352,6 +380,11 @@ h6 {
 
 .wedo__scroll__item {
   margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.wedo__scroll__item.active .wedo__scroll__header {
+  border-bottom: none;
 }
 
 .wedo__scroll__header {
@@ -384,39 +417,42 @@ h6 {
 
 .wedo__scroll__text p {
   margin: 20px;
-  overflow: scroll;
+  overflow: auto;
+
   height: 180px;
 }
 
 .arrow__photography {
   display: flex;
   height: 50px;
-  margin-left: 200px;
+  margin-left: 250px;
   margin-top: 10px;
 }
 
 .arrow__creativity {
   display: flex;
   height: 50px;
-  margin-left: 250px;
-  margin-top: 10px;
+  margin-left: 300px;
+  margin-top: 15px;
 }
 
 .arrow__webdesign {
   display: flex;
   height: 50px;
-  margin-left: 235px;
-  margin-top: 10px;
+  margin-left: 285px;
+  margin-top: 15px;
 }
 
 /* COMMENTS */
 
 .comments {
   background-color: #f8f8f8;
+  margin-top: 100px;
 }
 
 .comments__arrow {
   margin: auto 0;
+  cursor: pointer;
 }
 
 .comments__item {
@@ -443,34 +479,120 @@ h6 {
   color: #a9afb1;
 }
 
+.comments__name::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #f38281;
+  margin-top: 20px;
+}
+
+.comments__name {
+  display: flex;
+}
+
 .comments__name h4 {
   display: inline-block;
   font-family: Kaushan Script;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 /* OUR TEAM */
 
-.superteam__item h4 {
+.ourteam {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  margin-top: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
+}
+
+.ourteam__item {
+  position: relative;
+}
+
+.ourteam__item__img:hover .ourteam__social {
+  opacity: 1;
+}
+
+.ourteam__item__img {
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+.ourteam__item__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 370px;
+  height: 424px;
+  z-index: 2;
+  background: linear-gradient(
+    360deg,
+    rgba(237, 215, 137, 0.9) 0%,
+    rgba(233, 130, 131, 0.9) 100%
+  );
+  opacity: 0;
+}
+
+.ourteam__item__img:hover::after {
+  transform: translate3d(-10px, -10px, 0);
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+
+.ourteam__item h4 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
   font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  margin-top: 30px;
+}
+
+.ourteam__item p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
-.superteam__item p {
-  text-align: center;
-  margin-top: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #2d3033;
+.ourteam__social {
+  display: flex;
+
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+}
+
+.ourteam__social__item {
+  background-color: #f9efcf;
+  color: #f38281;
+  width: 42px;
+  height: 42px;
+  font-size: 30px;
+  margin: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ourteam__social__item:hover {
+  color: #fff;
+  background-color: #f38281;
+  transition: 0.3s linear;
 }
 
 /* PARTNERS */
