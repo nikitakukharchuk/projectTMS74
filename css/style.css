@@ -618,11 +618,60 @@ h6 {
 
 .work__items {
   display: flex;
-  justify-content: space-between;
+}
+
+.work__list {
+  flex: 1 1 0;
 }
 
 .work__item {
-  display: flex;
+  position: relative;
+  background: linear-gradient(to bottom, #f38181, #fce38a);
+  cursor: pointer;
+}
+
+.work__item:hover .work__img {
+  opacity: 0.1;
+}
+
+.work__img {
+  transition: opacity 0.2s linear;
+  display: block;
+  width: 100%;
+}
+
+.work__text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 0);
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.work__text h4 {
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 60px;
+}
+
+.work__text p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.work__item:hover .work__text {
+  opacity: 1;
 }
 
 /* REVIEWS */
@@ -641,12 +690,12 @@ h6 {
 .ourclients__items {
   display: flex;
   justify-content: space-between;
-  margin-top: 42px;
 }
 
 .ourclients__item {
   display: flex;
   justify-content: space-between;
+  padding: 20px 30px;
 }
 
 .client__reviwe {
@@ -667,8 +716,13 @@ h6 {
   font-size: 18px;
 }
 
-.client__reviwe img {
-  margin-top: 30px;
+.client__reviwe h4::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: #f38281;
+  margin-top: 20px;
 }
 
 .client__reviwe p {
@@ -682,11 +736,43 @@ h6 {
 
 .blog__items {
   margin-top: 30px;
+  display: flex;
 }
 
 .blog__item {
-  width: 33%;
-  display: inline-block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.blog__date {
+  background-color: #95e1d3;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  top: 27%;
+  left: -5%;
+}
+
+.blog__date h4 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 30px;
+  margin-top: 5px;
+}
+
+.blog__date p {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .blog__item h3 {
@@ -746,21 +832,56 @@ h6 {
   color: #f38281;
 }
 
+.map__items h3:after {
+  content: "";
+  display: block;
+  background-color: #f38281;
+  width: 20vh;
+  height: 3px;
+  margin: 20px auto;
+}
+
 /* FOOTER */
 
 .footer__items {
-  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item {
+  width: 100%;
+  margin: 20px;
 }
 
 .footer__mogo p {
   font-family: "Raleway";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   color: #c6cbcd;
+  padding: 10px 0;
 }
 
 .footer__followers {
-  margin-bottom: 20px;
+  margin: 20px 0;
+  display: flex;
+}
+
+.footer__followers {
+  font-family: Raleway;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.footer__followers__text {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 30px;
+  margin-right: 10px;
 }
 
 .link {
@@ -768,8 +889,17 @@ h6 {
   display: flex;
 }
 
+.link a {
+  margin: auto 3px;
+}
+
+.link p {
+  margin-right: 25px;
+}
+
 .link img {
   margin-left: 10px;
+  flex: 0 1 0;
 }
 
 .footer__blog__item {
@@ -793,14 +923,6 @@ h6 {
   font-size: 13px;
 }
 
-.footer__items {
-  display: flex;
-}
-
-.footer__item {
-  margin: 40px;
-}
-
 .footer__instagram h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -818,17 +940,19 @@ h6 {
   width: 100%;
   max-width: 380px;
   display: flex;
+  box-shadow: 0 3px 5px 1px #a9afb1;
 }
 
 .subscribe__input {
   padding: 12px;
-  background: #fff;
-  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  border: 1px solid #a09a9a;
   font-size: 15px;
-  color: #ccc;
-  font-family: "Raleway";
-  font-weight: 400;
-  text-transform: uppercase;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  opacity: 0.5;
 }
 
 .subscribe__button {
@@ -837,8 +961,11 @@ h6 {
   background-color: #95e1d3;
   border: 0;
   color: #fff;
-  font-family: "Raleway";
-  font-weight: 400;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+
   text-transform: uppercase;
 }
 
