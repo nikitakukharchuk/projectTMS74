@@ -817,6 +817,7 @@ h6 {
   -webkit-background-size: cover;
   background-size: cover;
   height: 231px;
+  cursor: pointer;
 }
 
 .map__items {
@@ -843,14 +844,25 @@ h6 {
 
 /* FOOTER */
 
+.footer {
+  margin-top: 50px;
+}
+
 .footer__items {
   display: flex;
   justify-content: space-between;
 }
 
 .footer__item {
-  width: 100%;
   margin: 20px;
+}
+
+.footer__item:first-child {
+  width: 470px;
+}
+
+.footer__item:last-child {
+  width: 270px;
 }
 
 .footer__mogo p {
@@ -902,40 +914,6 @@ h6 {
   flex: 0 1 0;
 }
 
-.footer__blog__item {
-  display: flex;
-}
-
-.blog__text {
-  margin-left: 10px;
-}
-
-.blog__text h3 {
-  text-transform: uppercase;
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.blog__text p {
-  font-family: "Raleway";
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.footer__instagram h3 {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.footer__instagram a {
-  display: inline-block;
-}
-
-.instagram__images {
-  display: flex;
-  justify-content: space-between;
-}
-
 .subscribe {
   width: 100%;
   max-width: 380px;
@@ -967,6 +945,64 @@ h6 {
   font-size: 15px;
 
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+.subscribe__button:hover {
+  background-color: #408679;
+}
+
+.subscribe__button:active {
+  background-color: #1e423c;
+}
+
+.footer__blog h4 {
+  text-transform: uppercase;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.footer__blog__item {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.blog__text {
+  padding-left: 10px;
+
+  width: 100%;
+}
+
+.blog__text h3 {
+  text-transform: uppercase;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.blog__text p {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.footer__instagram h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer__instagram__img {
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.see__all {
+  color: #333;
 }
 
 .copyright {
