@@ -94,6 +94,7 @@ h6 {
 }
 
 .slider__item {
+  position: relative;
   width: 24%;
   border-top: 2px solid #fff;
 
@@ -103,6 +104,22 @@ h6 {
   font-size: 18px;
   text-transform: uppercase;
   color: #fff;
+}
+
+.slider__item::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #f38281;
+  position: absolute;
+  top: -2px;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.slider__item:hover::after {
+  opacity: 1;
 }
 
 .slider__num {
