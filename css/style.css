@@ -80,6 +80,12 @@ h6 {
   color: #fff;
   text-transform: uppercase;
   transition: background 0.2s linear, color 0.2s linear;
+
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
 }
 
 .learnmore__btn:hover {
@@ -104,6 +110,7 @@ h6 {
   font-size: 18px;
   text-transform: uppercase;
   color: #fff;
+  margin: 0 10px;
 }
 
 .slider__item::after {
@@ -1025,4 +1032,52 @@ h6 {
   padding: 20px 0;
   text-align: center;
   border-top: 1px solid #c6cbcd;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1200px) {
+  /* WELCOME */
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    margin-right: 20px;
+  }
+  .welcome__title__template {
+    font-size: 48px;
+    line-height: 70px;
+  }
+
+  .welcome__title {
+    font-size: 105px;
+    line-height: 117px;
+  }
+
+  .welcome__title:after {
+    content: "";
+    display: block;
+    width: 115px;
+    height: 3px;
+    margin: 60px auto 0;
+
+    background-color: #fff;
+  }
+
+  .welcome__slider {
+    padding: 0 -20px;
+  }
+
+  .learnmore__btn {
+    padding: 10px 80px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 320px) {
 }
