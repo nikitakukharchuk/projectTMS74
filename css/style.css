@@ -111,6 +111,7 @@ h6 {
   text-transform: uppercase;
   color: #fff;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .slider__item::after {
@@ -243,7 +244,7 @@ h6 {
 
 .superteam {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .superteam__item {
@@ -480,12 +481,12 @@ h6 {
 
 .comments__item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .comments__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   padding: 40px;
 }
@@ -528,7 +529,7 @@ h6 {
 
 .ourteam {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   text-align: center;
 }
 
@@ -1019,8 +1020,9 @@ h6 {
 }
 
 .footer__instagram__img {
-  display: flex;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   cursor: pointer;
 }
 
@@ -1039,7 +1041,23 @@ h6 {
 @media screen and (max-width: 1200px) {
   /* WELCOME */
   .container {
-    padding: 0 20px;
+    margin: 0 20px;
+  }
+
+  .header__nav {
+    padding-top: 20px;
+  }
+
+  .welcome {
+    width: 100%;
+    height: 695px;
+    margin: 0 auto;
+    background: url("../css/img/welcome/MoGo2.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .welcome__inner {
+    margin-top: 100px;
   }
 
   .nav {
@@ -1048,6 +1066,7 @@ h6 {
   .welcome__title__template {
     font-size: 48px;
     line-height: 70px;
+    margin-bottom: 10px;
   }
 
   .welcome__title {
@@ -1060,13 +1079,13 @@ h6 {
     display: block;
     width: 115px;
     height: 3px;
-    margin: 60px auto 0;
+    margin: 30px auto 0;
 
     background-color: #fff;
   }
 
   .welcome__slider {
-    padding: 0 -20px;
+    margin-right: 50px;
   }
 
   .learnmore__btn {
@@ -1076,7 +1095,16 @@ h6 {
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
+    margin: 30px auto 60px;
   }
+
+  .slider__item {
+    padding-top: 15px;
+  }
+
+  .comments__arrow {
+  margin: auto 20px auto 0;
+  
 }
 
 @media screen and (max-width: 320px) {
