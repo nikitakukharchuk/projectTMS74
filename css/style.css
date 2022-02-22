@@ -147,7 +147,13 @@ h6 {
   left: 0;
   right: 0;
   z-index: 1000;
+  
 }
+
+.burger__menu {
+  display: none;
+}
+
 
 .header__nav {
   display: flex;
@@ -958,6 +964,7 @@ h6 {
   font-weight: normal;
   text-align: center;
   opacity: 0.5;
+  width: ;
 }
 
 .subscribe__button {
@@ -996,6 +1003,7 @@ h6 {
   display: flex;
   width: 100%;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .blog__text {
